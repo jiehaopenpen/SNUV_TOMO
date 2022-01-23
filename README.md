@@ -1,4 +1,4 @@
-# README of SNUV_TOMO#
+# SNUV_TOMO: 2D CT using SNUV with IRCD
 
 ## Project tree and description ##
 | File/folder   | Description                    |
