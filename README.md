@@ -39,7 +39,7 @@ Now you can project the phantom and use the projection to reconstruct the image:
 
 1. Open a Terminal window.
 
-2. Access the **build** folder: *cd path/to/ct-2d/build/*.
+2. Access the **build** folder: *cd path/to/SNUV_TOMO/build/*.
 
 3. If the input image is not binary, please first run *./TRANSFORMER* to transform it into binary files.
 
@@ -47,7 +47,7 @@ Now you can project the phantom and use the projection to reconstruct the image:
 
 5. The maximal iteration number of IRCD, and whether the intermediate results should be saved, can be specified in **settings.h**.
 
-6. Run the commands *./SNUV_IRCD* and *./ASDPOCS*to reconstruct the image from the projection vector using SNUV-IRCD and TV-ASDPOCS, respectively. The reconstructions are saved in binary&png files located in the **reconstructions** folder.
+6. Run the commands *./SNUV_IRCD* and *./ASDPOCS* to reconstruct the image from the projection vector using SNUV_IRCD and TV_ASDPOCS, respectively. The reconstructions are saved in binary & png files located in the **reconstructions** folder.
 
 
 
