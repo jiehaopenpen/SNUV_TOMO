@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "*.tikz": "latex",
-        "random": "cpp",
-        "iostream": "cpp"
-    }
-}
