@@ -4,19 +4,21 @@
 | File/folder   | Description                    |
 | ------------- | ------------------------------ |
 | **Eigen**     | [C++ template library for linear algebra](http://eigen.tuxfamily.org/index.php?title=Main_Page)   |
-| **include**   | Folder comprising self-made functions to save (resp. load) a sparse matrix or an array into (resp. from) a binary file; Mp.h contains the main IRCD routine.|
-| **objects**   | Contains different synthetic image to test reconstruction|
-| settings.h   | Specifies the studied object and some important quantities for the forward projection|
+| **include**   | Contains self-made functions to save & load Eigen sparse matrices or arrays into & from a binary file; MP.h contains the main IRCD routine.|
+| **objects**   | Contains different synthetic images to test reconstruction|
+| settings.h   | Specifies the studied object and some important quantities for the forward projection, and some algorithm details|
 | projection.cpp  | Perform the distance-driven projection for the 2D fan-beam geometry |
 | mainSNUV_IRCD.cpp   | Perform reconstruction using Iterative Reweighted Coordinate Descent (IRCD) Algorithm with Smoothed-NUV priors |
-| mainASDPOCS.cpp   | Perform ASDPOCS reconstruction|
+| mainASDPOCS.cpp   | Perform ASDPOCS reconstruction using TV/L1 regularization|
 | transformer.cpp   | Transform normal images into binary files|
 | CMakeLists.txt   | CMake file used to generate a Makefile |
 
 ## Before running the applications ##
 * Create 4 folders **build**, **projections**, **reconstructions** and **reconstructions/intermediate_results**.
 
-* Open a terminal and check the version of CMake installed on your computer with the command *cmake -version*. If the version is below 3.5 then modify the first line of **CMakeLists.txt**.
+* Open a terminal and check the version of CMake installed on your computer with the command *cmake -version*. If the version is below 3.0 then modify the first line of **CMakeLists.txt**.
+
+* **Attention**: OPENCV dependencies needed!!! Try to install opencv first.
 
 ## Example ##
 The **objects** folder contains different, for example, the binary file **SheppLogan256_UltraGrad** corresponds to a Shepp-Logan phantom with gradient of dimension 256 x 256, flattened column-wise (if a pixel has coordinates (m,n) with 0 <= m,n <= 255 then it has index m + 255*n in the flattened image).
